@@ -1,0 +1,44 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJZb3phbiBBZGlwcmFkYSIsImVtYWlsIjoiYWRpcHJhZGF5b3phbkBnbWFpbC5jb20iLCJpYXQiOjE2NTU0MzY2MzgsImV4cCI6MTY1NTQzNjY1M30.rbfJxancwtbt7lvfeK7f91lQhaFy7WGOmz3OHGfKOPk
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json 
+
+{
+    "username": "Ojan",
+    "name": "Yozan Adiprada",
+    "email": "adipradayozan@gmail.com",
+    "akses": "112",
+    "aktifSejak": "2022-01-01",
+    "password": "11223344",
+    "confPassword": "11223344"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json 
+
+{
+    "email": "adipradayozan@gmail.com",
+    "password": "11223344"
+}
+
+
+###
+GET http://localhost:5000/token
+
+
+###
+DELETE http://localhost:5000/logout
+
+###
+PUT http://localhost:5000/updateuser
+Content-Type: application/json 
+
+{
+    "id": "1",
+    "username": "Ojan Karitiang",
+    "name": "Yozan Adiprada",
+    "email": "adipradayozan@gmail.com"
+}
