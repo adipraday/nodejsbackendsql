@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import db from "./config/Database.js";
 import Users from "./models/UserModel.js";
+import Absensi from "./models/AbsensiModels.js";
+import WorkOrders from "./models/WOModels.js";
 import router from "./routes/index.js";
 
 dotenv.config();
@@ -14,6 +16,8 @@ try {
     await db.authenticate();
     console.log('Database Connected...');
     await Users.sync();
+    await Absensi.sync();
+    await WorkOrders.sync();
 } catch (error) {
     console.log(error);
 }

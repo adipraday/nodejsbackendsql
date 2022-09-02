@@ -1,0 +1,24 @@
+GET http://localhost:5000/absensi
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJZb3phbiBBZGlwcmFkYSIsImVtYWlsIjoiYWRpcHJhZGF5b3phbkBnbWFpbC5jb20iLCJpYXQiOjE2NTk2ODU3MjUsImV4cCI6MTY1OTY4NTc0MH0.F9jlSXGSlJlkh07b1uWgQCyECfHXtmqVc7b8HMbiz5I
+###
+POST http://localhost:5000/addabsensi
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJZb3phbiBBZGlwcmFkYSIsImVtYWlsIjoiYWRpcHJhZGF5b3phbkBnbWFpbC5jb20iLCJpYXQiOjE2NTkzNDEyMTYsImV4cCI6MTY1OTM0MTIzMX0.amJnAtSV7I5f6SAXjS0VKAizTxdSSPcl8rIibXp31rQ
+
+{
+    "id_user": "3",
+    "tgl_absensi": "2022-08-11",
+    "keterangan": "sakit",
+    "note": "sakittttt"
+}
+
+###
+GET http://localhost:5000/absensiuser
+Content-Type: application/json
+
+{
+    "id_user": "4"
+}
+
+###
+DELETE http://localhost:5000/deleteabsensi/15

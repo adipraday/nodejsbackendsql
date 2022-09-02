@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export const getUsers = async(req, res) => {
     try {
         const users = await Users.findAll({
-            attributes:['id','username','name','email','akses','aktif_sejak']
+            attributes:['id','username','name','jobdesk','aktif_sejak','whatsapp','telp','email']
         });
         res.json(users);
     } catch (error) {
@@ -14,7 +14,7 @@ export const getUsers = async(req, res) => {
 }
 
 export const Register = async(req, res) => {
-    const { username, name, email, akses, aktifSejak, password, confPassword } = req.body;
+    const { username, name, jobdesk, aktifSejak, whatsapp, telp, email, password, confPassword } = req.body;
     if(password !== confPassword) return res.status(400).json({msg: "Password dan Confirm Password tidak cocok"});
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
@@ -22,9 +22,11 @@ export const Register = async(req, res) => {
         await Users.create({
             username: username,
             name: name,
-            email: email,
-            akses: akses,
+            jobdesk: jobdesk,
             aktif_sejak: aktifSejak,
+            whatsapp: whatsapp,
+            telp: telp,
+            email: email,
             password: hashPassword
         });
         res.json({msg: "Register Berhasil"});

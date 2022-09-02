@@ -10,14 +10,20 @@ const Users = db.define('users',{
     name:{
         type: DataTypes.STRING
     },
-    email:{
+    jobdesk:{
         type: DataTypes.STRING
-    },
-    akses:{
-        type: DataTypes.INTEGER
     },
     aktif_sejak:{
         type: DataTypes.DATE
+    },
+    whatsapp:{
+        type: DataTypes.STRING
+    },
+    telp:{
+        type: DataTypes.STRING
+    },
+    email:{
+        type: DataTypes.STRING
     },
     password:{
         type: DataTypes.STRING

@@ -1,0 +1,41 @@
+GET http://localhost:5000/workorders
+Authorization: Bearer 
+
+###
+POST http://localhost:5000/addworkorder
+Content-Type: application/json 
+
+{
+    "no_wo": "VGMS/0113/DD",
+    "nama_client": "George",
+    "id_pelanggan": "rbw-george", 
+    "alamat": "jl. haji kocen, kalimulya", 
+    "contact_person": "081374785587",
+    "email": "george@gmail.com",
+    "tikor": "-0fibmsds54sf3sfb3sfb664fsfbsbn54bnsf4",
+    "link_tikor": "https://linktikor.com/dva4ad4b477aa",
+    "paket_berlangganan": "Broadband 50 Mbps FO",
+    "note": "this is note for george",
+    "label_fat": "fat/bfntrwd" 
+}
+
+###
+PUT http://localhost:5000/updateworkorder
+Content-Type: application/json 
+
+{
+    "id": "3",
+    "nama_client": "kontlss gooooood",
+    "id_pelanggan": "rbw-konts",
+    "alamat": "alamaat baru",
+    "contact_person": "081154667765", 
+    "email": "konts@gmail.com",
+    "tikor": "-tkhsjlksl2lk3l5l352l52ll25ll",
+    "link_tikor": "https://tikortest.com/fs0fsgs0fbf0bsfb00",
+    "paket_berlangganan": "Broadband 5 Mbps",
+    "note": "update for konts",
+    "label_fat": "fat/skjhfs8"
+}
+
+###
+DELETE http://localhost:5000/deleteworkorder/3
