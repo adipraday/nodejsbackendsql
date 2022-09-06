@@ -42,3 +42,6 @@ Content-Type: application/json
     "name": "Yozan Adiprada",
     "email": "adipradayozan@gmail.com"
 }
+
+###
+GET http://localhost:5000/getavailabletechnician

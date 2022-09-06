@@ -1,0 +1,13 @@
+POST http://localhost:5000/logactivitywo
+Content-Type: application/json 
+
+{
+    "id_user": "4",
+    "id_description": "2"
+}
+
+###
+GET http://localhost:5000/loggetteknisiwo/3
+
+###
+DELETE http://localhost:5000/deletelogworkorder/3

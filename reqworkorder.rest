@@ -2,6 +2,9 @@ GET http://localhost:5000/workorders
 Authorization: Bearer 
 
 ###
+GET http://localhost:5000/workorder/3
+
+###
 POST http://localhost:5000/addworkorder
 Content-Type: application/json 
 

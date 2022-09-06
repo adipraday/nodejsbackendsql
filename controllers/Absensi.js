@@ -25,7 +25,6 @@ export const AddAbsensi = async(req, res) => {
     });
     if(!user[0]) return res.sendStatus(204);
     const nama = user[0].name;
-    console.log(nama);
     try {
         await Absensi.create({
             id_user: id_user,

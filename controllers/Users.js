@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export const getUsers = async(req, res) => {
     try {
         const users = await Users.findAll({
-            attributes:['id','username','name','jobdesk','aktif_sejak','whatsapp','telp','email']
+            attributes:['id','username','name','jobdesk','aktif_sejak','whatsapp','telp','email','status']
         });
         res.json(users);
     } catch (error) {
@@ -104,4 +104,19 @@ export const updateUser = async(req, res) => {
         }
     });
     return res.sendStatus(200);
+}
+
+export const getAvailableTechnician = async(req, res) => {
+    try {
+        const availabletechnician = await Users.findAll({
+            where:{
+                jobdesk: 'Network Enginer',
+                status: 'Available'
+            },
+            attributes:['id','name','jobdesk','status']
+        });
+        res.json(availabletechnician);
+    } catch (error) {
+        console.log(error);
+    }
 }
