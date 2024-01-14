@@ -1,0 +1,9 @@
+GET http://localhost:5000/getdashboardact
+
+###
+curl --location 'https://api.360messenger.net/sendMessage/FlHHLUSjjcAWgramCMz9Mkvb4UHljWqf1sg' \
+--form 'phonenumber="6282153958016"' \
+--form 'text="test"' \
+--form 'url="https://url.com/image.jpeg"'
+
+###

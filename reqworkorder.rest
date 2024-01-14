@@ -9,17 +9,18 @@ POST http://localhost:5000/addworkorder
 Content-Type: application/json 
 
 {
-    "no_wo": "VGMS/0113/DD",
-    "nama_client": "George",
-    "id_pelanggan": "rbw-george", 
+    "user_id": "1",
+    "no_wo": "WO/9823929/DF",
+    "nama_client": "Jollie",
+    "id_pelanggan": "RBW-89338", 
     "alamat": "jl. haji kocen, kalimulya", 
-    "contact_person": "081374785587",
-    "email": "george@gmail.com",
-    "tikor": "-0fibmsds54sf3sfb3sfb664fsfbsbn54bnsf4",
-    "link_tikor": "https://linktikor.com/dva4ad4b477aa",
-    "paket_berlangganan": "Broadband 50 Mbps FO",
-    "note": "this is note for george",
-    "label_fat": "fat/bfntrwd" 
+    "contact_person": "081393008378",
+    "email": "jollie@gmail.com",
+    "tikor": "-0fibmsds54sf3sfb3hds80w098wfy2ubf029f9",
+    "link_tikor": "https://linktikor.com/9f13fg7922499",
+    "paket_berlangganan": "Broadband 100 Mbps FO",
+    "note": "this is note for jollie",
+    "label_fat": "https://tikor.net/98c23ff6834ff22f9y" 
 }
 
 ###
@@ -27,18 +28,53 @@ PUT http://localhost:5000/updateworkorder
 Content-Type: application/json 
 
 {
-    "id": "3",
-    "nama_client": "kontlss gooooood",
-    "id_pelanggan": "rbw-konts",
-    "alamat": "alamaat baru",
-    "contact_person": "081154667765", 
-    "email": "konts@gmail.com",
-    "tikor": "-tkhsjlksl2lk3l5l352l52ll25ll",
-    "link_tikor": "https://tikortest.com/fs0fsgs0fbf0bsfb00",
-    "paket_berlangganan": "Broadband 5 Mbps",
-    "note": "update for konts",
-    "label_fat": "fat/skjhfs8"
+    "userId": 1,
+    "id": 7,
+    "no_wo": "wo/28004/gh7",
+    "nama_client": "Lary7",
+    "id_pelanggan": "rbw-lary7", 
+    "alamat": "jl. haji kocen, kalimulya", 
+    "contact_person": "081393006744",
+    "email": "lary7@gmail.com",
+    "tikor": "-0fibmsds54sf3sfb3sfb664kjhkjfpwojrw904209fu000",
+    "link_tikor": "https://linktikor.com/8924rhf92",
+    "paket_berlangganan": "Broadband 25 Mbps FO",
+    "label_fat": "fat/02320044" 
 }
 
 ###
-DELETE http://localhost:5000/deleteworkorder/3
+PUT http://localhost:5000/updateprogresswo
+Content-Type: application/json 
+
+{
+    "userId": 1,
+    "id": 7,
+    "no_wo": "wo/28004/gh",
+    "nama_client": "Lary7",
+    "id_pelanggan": "rbw-lary7", 
+    "note": "Progress selesai done",
+    "label_fat": "fat/02320044/dn",
+    "status": "Done"
+}
+
+###
+POST http://localhost:5000/addteknisiwo
+Content-Type: application/json 
+
+{
+    "userId": 1,
+    "teknisiId": 2,
+    "id": 10
+}
+
+###
+GET http://localhost:5000/getteknisiwo/9
+
+###
+PUT http://localhost:5000/deleteworkorder/2/1
+
+###
+DELETE http://localhost:5000/deleteteknisiwo/9/2
+
+###
+GET http://localhost:5000/getteknisiwo/fat

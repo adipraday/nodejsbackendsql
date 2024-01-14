@@ -1,0 +1,39 @@
+######################################
+GET http://localhost:5000/getfat
+
+######################################
+GET http://localhost:5000/getavailablefat
+
+######################################
+GET http://localhost:5000/getfat/1
+
+#######################################
+POST http://localhost:5000/addfat
+Content-Type: application/json 
+
+{
+    "fat_label" : "fat teratai",
+    "fat_id" : "fat/0669/23",
+    "fat_area" : "teratai kalimulya",
+    "fat_input" : "fat kocen",
+    "fat_output_capacity" : 12,
+    "fat_output_used" : 7,
+    "fat_output_available" : 5 
+}
+
+#######################################
+PATCH http://localhost:5000/updatefat/9
+Content-Type: application/json 
+
+{
+    "fat_label" : "fat update test",
+    "fat_id" : "fat/update/test/002",
+    "fat_area" : "area test update",
+    "fat_input" : "input test update",
+    "fat_output_capacity" : 6,
+    "fat_output_used" : 0,
+    "fat_output_available" : 6 
+}
+
+###
+DELETE http://localhost:5000/deletefat/14
